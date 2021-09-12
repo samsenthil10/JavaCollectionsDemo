@@ -8,6 +8,7 @@ public class JavaCollectionsDemo {
 
 		doListDemo();
 		doStackDemo();
+		doQueueDemo();
 	}
 
 	public static void doListDemo() {
@@ -39,6 +40,34 @@ public class JavaCollectionsDemo {
 		String popped = stack.pop();
 
 		Iterator<String> iterator = stack.iterator();
+		while(iterator.hasNext()) {
+			System.out.println(iterator.next());
+		}
+	}
+
+
+
+	public static void doQueueDemo() {
+
+		PriorityQueue<String> queue = new PriorityQueue<>();
+
+		System.out.println("\nInside Queue Demo\n");
+		queue.add("Amit Sharma");
+		queue.add("Vijay Raj");
+		queue.add("Jai Shankar");
+		queue.add("Raj");
+		System.out.println("head:"+queue.element());
+		System.out.println("head:"+queue.peek());
+		System.out.println("Iterating the queue elements:");
+
+		Iterator<String> iterator = queue.iterator();
+		while(iterator.hasNext()) {
+			System.out.println(iterator.next());
+		}
+		queue.remove();
+		queue.poll();
+		System.out.println("After removing two elements:");
+		iterator = queue.iterator();
 		while(iterator.hasNext()) {
 			System.out.println(iterator.next());
 		}
