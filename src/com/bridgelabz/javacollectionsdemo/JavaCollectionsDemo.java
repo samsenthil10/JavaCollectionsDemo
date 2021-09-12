@@ -9,6 +9,7 @@ public class JavaCollectionsDemo {
 		doListDemo();
 		doStackDemo();
 		doQueueDemo();
+		doSetDemo();
 	}
 
 	public static void doListDemo() {
@@ -70,6 +71,19 @@ public class JavaCollectionsDemo {
 		iterator = queue.iterator();
 		while(iterator.hasNext()) {
 			System.out.println(iterator.next());
+		}
+	}
+	public static void doSetDemo( ) {
+
+		Set<String> set = new LinkedHashSet<>();
+
+		System.out.println("\nInside Set Demo\n");
+		set.add("Ravi");
+		set.add("Vijay");
+		set.add("Ravi");
+		set.add("Ajay");
+		for(String element: set) {
+			System.out.println(element);
 		}
 	}
 }
