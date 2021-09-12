@@ -10,6 +10,7 @@ public class JavaCollectionsDemo {
 		doStackDemo();
 		doQueueDemo();
 		doSetDemo();
+		doMapDemo();
 	}
 
 	public static void doListDemo() {
@@ -84,6 +85,21 @@ public class JavaCollectionsDemo {
 		set.add("Ajay");
 		for(String element: set) {
 			System.out.println(element);
+		}
+	}
+
+	public static void doMapDemo() {
+
+		Map<Integer, String> map = new HashMap<>();
+
+		System.out.println("\nInside Map Demo\n");
+		map.put(100, "Amrit");
+		map.put(101, "Vijay");
+		map.put(102, "Rahul");
+		map.put(101, "Surya");
+
+		for(Map.Entry<Integer, String> mapper:map.entrySet()) {
+			System.out.println(mapper.getKey()+" "+mapper.getValue());
 		}
 	}
 }
